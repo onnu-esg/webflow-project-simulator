@@ -1,8 +1,11 @@
 // vite.config.js
 export default {
-  // config options
   base: "webflow-project-simulator",
-  //   build: {
-  //     assetsDir: "webflow-project-simulator",
-  //   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: "[name].js",
+      },
+    },
+  },
 };
