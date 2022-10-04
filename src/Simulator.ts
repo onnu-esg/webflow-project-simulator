@@ -1,4 +1,4 @@
-import { compoundInterest } from "./formatters";
+import { compoundInterest } from "./untils";
 import { Defaults } from "./types";
 
 const CO2_MASS = 44 / 12;

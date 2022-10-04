@@ -1,6 +1,5 @@
-import { Simulator } from "./Simulator";
 import { Defaults } from "./types";
-import { bindUI } from "./ui-bindings";
+import { App } from "./App";
 
 const defaults: Defaults = {
   sell: 0.1,
@@ -24,6 +23,4 @@ const defaults: Defaults = {
   },
 };
 
-const sim = new Simulator(defaults);
-
-$(() => bindUI(sim, defaults));
+$(() => new App(defaults));
