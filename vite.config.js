@@ -1,7 +1,8 @@
 // vite.config.js
 export default {
   // config options
-  build: {
-    assetsDir: "webflow-project-simulator",
-  },
+  base: "webflow-project-simulator",
+  //   build: {
+  //     assetsDir: "webflow-project-simulator",
+  //   },
 };
