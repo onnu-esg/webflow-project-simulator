@@ -13,7 +13,7 @@ export const kgs = (n: number) =>
     maximumFractionDigits: 0,
   }).format(n);
 
-export const tons = (n: number) => kgs(n / 1000).replace("kg", "tons");
+export const tons = (n: number) => kgs(n / 1000).replace("kg", "");
 
 export const kWh = (n: number) =>
   new Intl.NumberFormat("en-GB", {
