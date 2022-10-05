@@ -4,7 +4,7 @@ export default {
   build: {
     rollupOptions: {
       output: {
-        // entryFileNames: "[name].js",
+        entryFileNames: "[name].js",
       },
     },
   },

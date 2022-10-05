@@ -12,6 +12,8 @@ export class Simulator {
   energy: number;
   feedstock: Feedstock;
 
+  years: number;
+
   // Outputs
   saving = 0;
   co2 = 0;
@@ -19,16 +21,21 @@ export class Simulator {
   biochar = 0;
   waste = 0;
 
-  saving10 = 0;
-
   constructor(defaults: Defaults) {
     this.defaults = defaults;
     this.price = defaults.price.initial;
     this.energy = defaults.energy.initial;
     this.feedstock = defaults.feedstocks[0];
+    this.years = 1;
 
     this.calculate();
   }
+
+  setYears(years: number) {
+    this.years = years;
+    this.calculate();
+  }
+
   setPrice(price: number) {
     this.price = price;
     this.calculate();
@@ -47,18 +54,19 @@ export class Simulator {
   calculate() {
     const { pyrolsis, sell, inflation, emissionFactor } = this.defaults;
 
-    this.saving = (this.price - sell) * this.energy * pyrolsis.hours;
+    const saving = (this.price - sell) * this.energy * pyrolsis.hours;
 
-    this.saving10 = Array(10)
-      .fill(this.saving)
+    this.saving = Array(this.years)
+      .fill(saving)
       .reduce((sum, v, i) => sum + compoundInterest(v, i, inflation), 0);
 
-    this.fossils = this.energy * pyrolsis.hours * emissionFactor;
+    this.fossils = this.energy * pyrolsis.hours * emissionFactor * this.years;
 
     this.waste =
       (this.energy / this.feedstock.energy) *
       PYROLSIS_EFFICIENCY *
-      pyrolsis.hours;
+      pyrolsis.hours *
+      this.years;
 
     this.biochar = this.waste * this.feedstock.biocharYield;
 
@@ -66,6 +74,7 @@ export class Simulator {
       this.biochar *
       this.feedstock.carbonContent *
       this.feedstock.carbonDecay *
-      CO2_MASS;
+      CO2_MASS *
+      this.years;
   }
 }

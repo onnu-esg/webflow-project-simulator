@@ -13,22 +13,40 @@ export class App {
     this.sim = new Simulator(defaults);
 
     this.render();
+
+    this.initYearsSwitch();
     this.initFeedstockSelector();
     this.initPriceSlider();
     this.initEnergySlider();
   }
 
-  initFeedstockSelector() {
-    $<HTMLSelectElement>(".simulator_select-field").on("change", (event) => {
-      this.sim.setFeedstock(parseInt(event.target.value));
+  initYearsSwitch() {
+    let state = false;
+    $("#simulator_switch-years").on("click", () => {
+      state = !state;
+      $("#simulator_switch-years .simulator_switch-toggle").css(
+        "left",
+        state ? "2rem" : "0rem"
+      );
+      this.sim.setYears(state ? 10 : 1);
       this.render();
     });
+  }
+
+  initFeedstockSelector() {
+    $<HTMLSelectElement>("#simulator-select-feedstock").on(
+      "change",
+      (event) => {
+        this.sim.setFeedstock(parseInt(event.target.value));
+        this.render();
+      }
+    );
   }
 
   initPriceSlider() {
     const { price } = this.defaults;
 
-    $(".simulator_slider-price").slider({
+    $("#simulator_slider-price").slider({
       classes: {
         "ui-slider-handle": "simulator_track-toggle",
       },
@@ -44,14 +62,12 @@ export class App {
         this.render();
       },
     });
-    // should be moved to CSS file
-    $(".simulator_slider-price").children().css("position", "absolute");
   }
 
   initEnergySlider() {
     const { energy } = this.defaults;
 
-    $(".simulator_slider-energy").slider({
+    $("#simulator_slider-energy").slider({
       classes: {
         "ui-slider-handle": "simulator_track-toggle",
       },
@@ -67,27 +83,19 @@ export class App {
         this.render();
       },
     });
-
-    // should be moved to CSS file
-    $(".simulator_slider-energy").children().css("position", "absolute");
   }
 
   render() {
     const sim = this.sim;
 
-    $(".simulator_price-text").text(gbp(sim.price));
-    $(".simulator_energy-text").text(kWh(sim.energy));
+    $("#simulator_saving").text(gbp(sim.saving));
 
-    $(".simulator_saving-text").text(gbp(sim.saving));
-    $(".simulator_saving_10-text").text(gbp(sim.saving10));
+    $("#simulator_price").text(gbp(sim.price));
+    $("#simulator_energy").text(kWh(sim.energy));
 
-    $(".simulator_co2-text").text(tons(sim.co2));
-    $(".simulator_co2_10-text").text(tons(sim.co2 * 10));
-    $(".simulator_fossil-text").text(tons(sim.fossils));
-    $(".simulator_fossil_10-text").text(tons(sim.fossils * 10));
-    $(".simulator_biochar-text").text(tons(sim.biochar));
-    $(".simulator_biochar_10-text").text(tons(sim.biochar * 10));
-    $(".simulator_waste-text").text(tons(sim.waste));
-    $(".simulator_waste_10-text").text(tons(sim.waste * 10));
+    $("#simulator_co2").text(tons(sim.co2));
+    $("#simulator_fossil").text(tons(sim.fossils));
+    $("#simulator_biochar").text(tons(sim.biochar));
+    $("#simulator_waste").text(tons(sim.waste));
   }
 }

@@ -6,7 +6,7 @@
     <title>Project Simulator</title>
     <link
       rel="stylesheet"
-      href="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/css/onnu-biochar.webflow.f87939351.css"
+      href="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/css/onnu-biochar.webflow.ed37f6086.css"
     />
 
     <script
@@ -40,24 +40,66 @@
                   >
                     Project <span class="text-color-teal">simulator</span>
                   </h2>
+                  <div class="simulator_switch-container">
+                    <p class="text-size-medium">Annually</p>
+                    <div
+                      id="simulator_switch-years"
+                      class="simulator_switch-track"
+                    >
+                      <div class="simulator_switch-toggle"></div>
+                    </div>
+                    <p class="text-size-medium">Over 10 years</p>
+                  </div>
                   <div
                     id="w-node-_6350d840-0f21-cce7-0562-bb74a009bbf5-bc43cc4d"
                     class="max-width-large"
                   >
                     <div class="simulator_component">
-                      <div class="w-layout-grid simulator_top-row">
+                      <div
+                        id="w-node-_42954f68-5bda-22ea-47a0-bf94fdc7647f-bc43cc4d"
+                        class="simulator_card-wide"
+                      >
+                        <div class="simulator_card-left-content">
+                          <div
+                            id="w-node-_42954f68-5bda-22ea-47a0-bf94fdc76481-bc43cc4d"
+                            class="icon-frame"
+                          >
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/63359d42b5bd8006629302cc_Clean%20Energy%20white.svg"
+                              loading="lazy"
+                              alt=""
+                              class="card-icon"
+                            />
+                          </div>
+                          <p
+                            id="w-node-_42954f68-5bda-22ea-47a0-bf94fdc76485-bc43cc4d"
+                            class="simulator_large is-large"
+                          >
+                            Energy Savings
+                          </p>
+                        </div>
+                        <div class="simulator_card-right-content is-large">
+                          <p
+                            id="simulator_saving"
+                            class="simulator_large is-large w-node-_42954f68-5bda-22ea-47a0-bf94fdc7648a-bc43cc4d"
+                          >
+                            £ -
+                          </p>
+                        </div>
+                      </div>
+                      <div class="w-layout-grid simulator_row-inputs">
                         <div
-                          id="w-node-_1d9d4915-bb20-a96d-dbb9-50c2b0329c18-bc43cc4d"
+                          id="w-node-_579a542d-fbb7-0f7b-d760-7d30f4b8259b-bc43cc4d"
                           class="w-layout-grid simulator_top-column"
                         >
                           <p
-                            id="w-node-_889742d5-bf39-d443-d25f-ea6775f7e66b-bc43cc4d"
+                            id="w-node-_579a542d-fbb7-0f7b-d760-7d30f4b8259c-bc43cc4d"
                             class="text-size-medium text-weight-medium"
                           >
                             Feedstock
                           </p>
                           <div
-                            id="w-node-_4df5d8bd-8555-ced8-8ea6-a2ad0eaa75ae-bc43cc4d"
+                            id="w-node-_579a542d-fbb7-0f7b-d760-7d30f4b8259e-bc43cc4d"
                             class="simulator_form-block w-form"
                           >
                             <form
@@ -70,9 +112,9 @@
                               data-hs-cf-bound="true"
                             >
                               <select
-                                id="Simulator-select-field"
-                                name="Simulator-select-field"
-                                data-name="Simulator select field"
+                                id="simulator-select-feedstock"
+                                name="Simulator-select-field-2"
+                                data-name="Simulator Select Field 2"
                                 class="simulator_select-field w-select"
                               >
                                 <option value="0">Miscanthus</option>
@@ -105,61 +147,141 @@
                             </div>
                           </div>
                         </div>
-                          <div
-                            id="w-node-_1d9d4915-bb20-a96d-dbb9-50c2b0329c18-bc43cc4d"
-                            class="w-layout-grid simulator_top-column"
+                        <div
+                          id="w-node-_579a542d-fbb7-0f7b-d760-7d30f4b825a7-bc43cc4d"
+                          class="w-layout-grid simulator_top-column"
+                        >
+                          <p
+                            id="w-node-_579a542d-fbb7-0f7b-d760-7d30f4b825a8-bc43cc4d"
+                            class="text-size-medium text-weight-medium"
                           >
-                            <p
-                              id="w-node-a6e184f9-fbce-b3a3-6175-aa592e5627ad-bc43cc4d"
-                              class="text-size-medium text-weight-medium"
-                            >
-                              How much do you currently pay per kWh?
-                            </p>
+                            What do you currently pay?
+                          </p>
+                          <div
+                            id="w-node-_579a542d-fbb7-0f7b-d760-7d30f4b825aa-bc43cc4d"
+                            class="simulator_slider-container"
+                          >
                             <div
-                              id="w-node-_21ff264c-e4b9-828c-f434-1047a3f8ab90-bc43cc4d"
-                              class="simulator_slider-container"
+                              id="simulator_slider-price"
+                              class="simulator_slider-track"
                             >
-                              <div
-                                class="simulator_slider-track simulator_slider-price"
-                              >
-                                <!-- <div class="simulator_track-toggle"></div> -->
-                              </div>
-                              <p id="ps-cost-kwh" class="simulator_price-text">
-                                -
-                              </p>
+                              <div class="simulator_track-toggle hide">III</div>
                             </div>
+                            <p
+                              id="simulator_price"
+                              class="simulator_amount-text"
+                            >
+                              £ - kWh
+                            </p>
                           </div>
-
-                          <div
-                            id="w-node-_1d9d4915-bb20-a96d-dbb9-50c2b0329c18-bc43cc4d"
-                            class="w-layout-grid simulator_top-column"
+                        </div>
+                        <div
+                          id="w-node-d4e804c9-f9d9-f581-ca41-594f4cd95078-bc43cc4d"
+                          class="w-layout-grid simulator_top-column"
+                        >
+                          <p
+                            id="w-node-d4e804c9-f9d9-f581-ca41-594f4cd95079-bc43cc4d"
+                            class="text-size-medium text-weight-medium"
                           >
-                            <p
-                              id="w-node-a6e184f9-fbce-b3a3-6175-aa592e5627ad-bc43cc4d"
-                              class="text-size-medium text-weight-medium"
-                            >
-                              How many kWh do you use per day?
-                            </p>
+                            Energy Usage?
+                          </p>
+                          <div
+                            id="w-node-d4e804c9-f9d9-f581-ca41-594f4cd9507b-bc43cc4d"
+                            class="simulator_slider-container"
+                          >
                             <div
-                              id="w-node-_21ff264c-e4b9-828c-f434-1047a3f8ab90-bc43cc4d"
-                              class="simulator_slider-container"
+                              id="simulator_slider-energy"
+                              class="simulator_slider-track"
                             >
-                              <div
-                                class="simulator_slider-track simulator_slider-energy"
-                              >
-                                <!-- <div class="simulator_track-toggle"></div> -->
-                              </div>
-                              <p id="ps-cost-kwh" class="simulator_energy-text">
-                                -
-                              </p>
+                              <div class="simulator_track-toggle hide">III</div>
                             </div>
+                            <p
+                              id="simulator_energy"
+                              class="simulator_amount-text"
+                            >
+                              - kW
+                            </p>
                           </div>
                         </div>
                       </div>
                       <div
                         id="w-node-c6eae854-ba75-013c-87c8-e0b7700e5345-bc43cc4d"
-                        class="w-layout-grid simulator_bottom-row"
+                        class="w-layout-grid simulator_row-metrics"
                       >
+                        <div
+                          id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bce-bc43cc4d"
+                          class="simulator_card"
+                        >
+                          <div class="simulator_card-top-content">
+                            <div
+                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd0-bc43cc4d"
+                              class="icon-frame is-small"
+                            >
+                              <img
+                                src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633bd31f2c73b18e62104136_Carbon%20Removal%20white.svg"
+                                loading="lazy"
+                                alt=""
+                                class="card-icon"
+                              />
+                            </div>
+                            <p
+                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
+                              class="simulator_large"
+                            >
+                              CO<sub>2</sub> Captured
+                            </p>
+                          </div>
+                          <div class="simulator_card-bottom-content">
+                            <p
+                              id="simulator_co2"
+                              class="simulator_large is-small w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
+                            >
+                              -
+                            </p>
+                            <p
+                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd7-bc43cc4d"
+                            >
+                              tons CO<sub>2</sub>e
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          id="w-node-_087bed74-755e-df0e-483c-7034f2abcc12-bc43cc4d"
+                          class="simulator_card"
+                        >
+                          <div class="simulator_card-top-content">
+                            <div
+                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc14-bc43cc4d"
+                              class="icon-frame is-small"
+                            >
+                              <img
+                                src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/6335b70f853e0af4b9840161_Industrial%20Processors%20white.svg"
+                                loading="lazy"
+                                alt=""
+                                class="card-icon"
+                              />
+                            </div>
+                            <p
+                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc18-bc43cc4d"
+                              class="simulator_large"
+                            >
+                              Emissions Avoided<br />(from fossil fuels)
+                            </p>
+                          </div>
+                          <div class="simulator_card-bottom-content">
+                            <p
+                              id="simulator_fossil"
+                              class="simulator_large is-small w-node-_087bed74-755e-df0e-483c-7034f2abcc1d-bc43cc4d"
+                            >
+                              -
+                            </p>
+                            <p
+                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc1b-bc43cc4d"
+                            >
+                              tons CO<sub>2</sub>e
+                            </p>
+                          </div>
+                        </div>
                         <div
                           id="w-node-_108317f6-a5ea-0128-e9dd-11e53175d04a-bc43cc4d"
                           class="simulator_card"
@@ -177,202 +299,144 @@
                               />
                             </div>
                             <p
-                              id="w-node-_5eba360a-77af-a204-3ded-0fc7a755216b-bc43cc4d"
-                            >
-                              Biochar
-                            </p>
-                            <p
                               id="w-node-_09c870b6-ce87-18cd-32fc-89ebc882ab39-bc43cc4d"
-                              class="simulator_large-number simulator_biochar-text"
+                              class="simulator_large"
                             >
-                              -
+                              Biochar Manufactured
                             </p>
                           </div>
                           <div class="simulator_card-bottom-content">
+                            <p
+                              id="simulator_biochar"
+                              class="simulator_large is-small w-node-_9bcdd2a5-7dc9-57dc-e448-945c6b9e8487-bc43cc4d"
+                            >
+                              -
+                            </p>
                             <p
                               id="w-node-_9bcdd2a5-7dc9-57dc-e448-945c6b9e8485-bc43cc4d"
                             >
-                              Over 10 years
-                            </p>
-                            <p
-                              id="w-node-_9bcdd2a5-7dc9-57dc-e448-945c6b9e8487-bc43cc4d"
-                              class="simulator_large-number is-small simulator_biochar_10-text"
-                            >
-                              -
+                              tons
                             </p>
                           </div>
                         </div>
                         <div
-                          id="w-node-_087bed74-755e-df0e-483c-7034f2abcc12-bc43cc4d"
+                          id="w-node-_29a9786f-2d6d-9658-ecab-3e2fede2dc79-bc43cc4d"
                           class="simulator_card"
                         >
                           <div class="simulator_card-top-content">
                             <div
-                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc14-bc43cc4d"
+                              id="w-node-_29a9786f-2d6d-9658-ecab-3e2fede2dc7b-bc43cc4d"
                               class="icon-frame is-small"
                             >
                               <img
-                                src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/63359d42b5bd8006629302cc_Clean%20Energy%20white.svg"
+                                src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/6335b576a5533aa4c50f23cf_Local%20Feedstock%20white.svg"
                                 loading="lazy"
                                 alt=""
                                 class="card-icon"
                               />
                             </div>
                             <p
-                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc16-bc43cc4d"
+                              id="w-node-_29a9786f-2d6d-9658-ecab-3e2fede2dc82-bc43cc4d"
+                              class="simulator_large"
                             >
-                              Annual energy saving
-                            </p>
-                            <p
-                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc18-bc43cc4d"
-                              class="simulator_large-number simulator_saving-text"
-                            >
-                              -
+                              Waste Diverted
                             </p>
                           </div>
                           <div class="simulator_card-bottom-content">
                             <p
-                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc1b-bc43cc4d"
-                            >
-                              Over 10 years
-                            </p>
-                            <p
-                              id="w-node-_087bed74-755e-df0e-483c-7034f2abcc1d-bc43cc4d"
-                              class="simulator_large-number is-small simulator_saving_10-text"
+                              id="simulator_waste"
+                              class="simulator_large is-small w-node-_29a9786f-2d6d-9658-ecab-3e2fede2dc87-bc43cc4d"
                             >
                               -
                             </p>
-                          </div>
-                        </div>
-                        <div
-                          id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bce-bc43cc4d"
-                          class="simulator_card"
-                        >
-                          <div class="simulator_card-top-content">
-                            <div
-                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd0-bc43cc4d"
-                              class="icon-frame is-small"
-                            >
-                              <img
-                                src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/632c82dcdb6deec60ce42d86_icon.svg"
-                                loading="lazy"
-                                alt=""
-                                class="card-icon"
-                              />
-                            </div>
                             <p
-                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd2-bc43cc4d"
+                              id="w-node-_29a9786f-2d6d-9658-ecab-3e2fede2dc85-bc43cc4d"
                             >
-                              Carbon captured (CO<sub>2</sub> eq)
-                            </p>
-                            <p
-                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
-                              class="simulator_large-number simulator_co2-text"
-                            >
-                              -
+                              tons
                             </p>
                           </div>
-                          <div class="simulator_card-bottom-content">
-                            <p
-                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd7-bc43cc4d"
-                            >
-                              Over 10 years
-                            </p>
-                            <p
-                              id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
-                              class="simulator_large-number is-small simulator_co2_10-text"
-                            >
-                              -
-                            </p>
-                          </div>
-                        </div>
-
-                        <div
-                        id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bce-bc43cc4d"
-                        class="simulator_card"
-                      >
-                        <div class="simulator_card-top-content">
-                          <div
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd0-bc43cc4d"
-                            class="icon-frame is-small"
-                          >
-                            <img
-                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/632c82dcdb6deec60ce42d86_icon.svg"
-                              loading="lazy"
-                              alt=""
-                              class="card-icon"
-                            />
-                          </div>
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd2-bc43cc4d"
-                          >
-                            Waste Diverted
-                          </p>
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
-                            class="simulator_large-number simulator_waste-text"
-                          >
-                            -
-                          </p>
-                        </div>
-                        <div class="simulator_card-bottom-content">
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd7-bc43cc4d"
-                          >
-                            Over 10 years
-                          </p>
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
-                            class="simulator_large-number is-small simulator_waste_10-text"
-                          >
-                            -
-                          </p>
                         </div>
                       </div>
-
                       <div
-                        id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bce-bc43cc4d"
-                        class="simulator_card"
+                        id="w-node-f463b080-4a23-7e55-19de-7394f0950b31-bc43cc4d"
+                        class="simulator_row-sdgs"
                       >
-                        <div class="simulator_card-top-content">
-                          <div
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd0-bc43cc4d"
-                            class="icon-frame is-small"
+                        <div class="simulator_card-left-content sdgs">
+                          <p
+                            id="w-node-f463b080-4a23-7e55-19de-7394f0950b35-bc43cc4d"
+                            class="simulator_large"
                           >
+                            Sustainable Development Goals Achieved
+                          </p>
+                        </div>
+                        <div class="simulator_sdgs">
+                          <div class="simulator_card-sdg">
                             <img
-                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/632c82dcdb6deec60ce42d86_icon.svg"
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27541e9ee1257724d398_E-WEB-Goal-07.png"
                               loading="lazy"
+                              sizes="(max-width: 479px) 89vw, (max-width: 767px) 27vw, (max-width: 991px) 98px, 7vw"
+                              srcset="
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27541e9ee1257724d398_E-WEB-Goal-07-p-500.png   500w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27541e9ee1257724d398_E-WEB-Goal-07-p-800.png   800w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27541e9ee1257724d398_E-WEB-Goal-07-p-1080.png 1080w
+                              "
                               alt=""
-                              class="card-icon"
+                              class="image"
                             />
                           </div>
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd2-bc43cc4d"
-                          >
-                            Emissons avoided from fossil fuels  (CO<sub>2</sub> eq)
-                          </p>
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
-                            class="simulator_large-number simulator_fossil-text"
-                          >
-                            -
-                          </p>
+                          <div class="simulator_card-sdg">
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27547bf3a98970c05cd0_E-WEB-Goal-09.png"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 89vw, (max-width: 767px) 27vw, (max-width: 991px) 98px, 7vw"
+                              srcset="
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27547bf3a98970c05cd0_E-WEB-Goal-09-p-500.png   500w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27547bf3a98970c05cd0_E-WEB-Goal-09-p-800.png   800w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27547bf3a98970c05cd0_E-WEB-Goal-09-p-1080.png 1080w
+                              "
+                              alt=""
+                            />
+                          </div>
+                          <div class="simulator_card-sdg">
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d2753296510d3ad5e0724_E-WEB-Goal-11.png"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 89vw, (max-width: 767px) 27vw, (max-width: 991px) 98px, 7vw"
+                              srcset="
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d2753296510d3ad5e0724_E-WEB-Goal-11-p-500.png   500w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d2753296510d3ad5e0724_E-WEB-Goal-11-p-800.png   800w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d2753296510d3ad5e0724_E-WEB-Goal-11-p-1080.png 1080w
+                              "
+                              alt=""
+                            />
+                          </div>
+                          <div class="simulator_card-sdg">
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27534d233033e7e0abd9_E-WEB-Goal-12.png"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 89vw, (max-width: 767px) 27vw, (max-width: 991px) 98px, 7vw"
+                              srcset="
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27534d233033e7e0abd9_E-WEB-Goal-12-p-500.png   500w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27534d233033e7e0abd9_E-WEB-Goal-12-p-800.png   800w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27534d233033e7e0abd9_E-WEB-Goal-12-p-1080.png 1080w
+                              "
+                              alt=""
+                            />
+                          </div>
+                          <div class="simulator_card-sdg">
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27544d24d11896a35e81_E-WEB-Goal-13.png"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 89vw, (max-width: 767px) 27vw, (max-width: 991px) 98px, 7vw"
+                              srcset="
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27544d24d11896a35e81_E-WEB-Goal-13-p-500.png   500w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27544d24d11896a35e81_E-WEB-Goal-13-p-800.png   800w,
+                                https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/633d27544d24d11896a35e81_E-WEB-Goal-13-p-1080.png 1080w
+                              "
+                              alt=""
+                            />
+                          </div>
                         </div>
-                        <div class="simulator_card-bottom-content">
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd7-bc43cc4d"
-                          >
-                            Over 10 years
-                          </p>
-                          <p
-                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
-                            class="simulator_large-number is-small simulator_fossil_10-text"
-                          >
-                            -
-                          </p>
-                        </div>
-                      </div>
-
                       </div>
                     </div>
                   </div>
