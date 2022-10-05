@@ -60,10 +60,10 @@ export class App {
       step: energy.step,
       value: this.sim.energy,
 
-      slide: (_event, ui) => {
-        if (!ui.value) return;
+      slide: (_event, { value }) => {
+        if (typeof value === "undefined") return;
 
-        this.sim.setEnergy(ui.value);
+        this.sim.setEnergy(value);
         this.render();
       },
     });
