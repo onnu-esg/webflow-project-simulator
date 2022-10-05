@@ -74,7 +74,6 @@ export class Simulator {
       this.biochar *
       this.feedstock.carbonContent *
       this.feedstock.carbonDecay *
-      CO2_MASS *
-      this.years;
+      CO2_MASS;
   }
 }
