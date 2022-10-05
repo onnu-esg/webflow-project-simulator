@@ -75,20 +75,11 @@
                                 data-name="Simulator select field"
                                 class="simulator_select-field w-select"
                               >
-                                <option value="">Select feedstock</option>
-                                <option value="Forestry residues">
-                                  Forestry residues
-                                </option>
-                                <option value="Green waste">Green waste</option>
-                                <option value="Food manufacturing residues">
-                                  Food manufacturing residues
-                                </option>
-                                <option value="Agricultural residues">
-                                  Agricultural residues
-                                </option>
-                                <option value="Biosolids / manure">
-                                  Biosolids / manure
-                                </option>
+                                <option value="0">Miscanthus</option>
+                                <option value="1">Poultry litter</option>
+                                <option value="2">Wheat straw</option>
+                                <option value="3">Wood</option>
+                                <option value="4">Hemp</option>
                               </select>
                             </form>
                             <div
@@ -114,26 +105,54 @@
                             </div>
                           </div>
                         </div>
-                        <div
-                          id="w-node-a6e184f9-fbce-b3a3-6175-aa592e5627ac-bc43cc4d"
-                          class="w-layout-grid simulator_top-column"
-                        >
-                          <p
-                            id="w-node-a6e184f9-fbce-b3a3-6175-aa592e5627ad-bc43cc4d"
-                            class="text-size-medium text-weight-medium"
-                          >
-                            How much do you currently pay per KWh?
-                          </p>
                           <div
-                            id="w-node-_21ff264c-e4b9-828c-f434-1047a3f8ab90-bc43cc4d"
-                            class="simulator_slider-container"
+                            id="w-node-_1d9d4915-bb20-a96d-dbb9-50c2b0329c18-bc43cc4d"
+                            class="w-layout-grid simulator_top-column"
                           >
-                            <div class="simulator_slider-track">
-                              <!-- <div class="simulator_track-toggle"></div> -->
-                            </div>
-                            <p id="ps-cost-kwh" class="simulator_amount-text">
-                              30p
+                            <p
+                              id="w-node-a6e184f9-fbce-b3a3-6175-aa592e5627ad-bc43cc4d"
+                              class="text-size-medium text-weight-medium"
+                            >
+                              How much do you currently pay per kWh?
                             </p>
+                            <div
+                              id="w-node-_21ff264c-e4b9-828c-f434-1047a3f8ab90-bc43cc4d"
+                              class="simulator_slider-container"
+                            >
+                              <div
+                                class="simulator_slider-track simulator_slider-price"
+                              >
+                                <!-- <div class="simulator_track-toggle"></div> -->
+                              </div>
+                              <p id="ps-cost-kwh" class="simulator_price-text">
+                                30p
+                              </p>
+                            </div>
+                          </div>
+
+                          <div
+                            id="w-node-_1d9d4915-bb20-a96d-dbb9-50c2b0329c18-bc43cc4d"
+                            class="w-layout-grid simulator_top-column"
+                          >
+                            <p
+                              id="w-node-a6e184f9-fbce-b3a3-6175-aa592e5627ad-bc43cc4d"
+                              class="text-size-medium text-weight-medium"
+                            >
+                              How many kWh do you use per day?
+                            </p>
+                            <div
+                              id="w-node-_21ff264c-e4b9-828c-f434-1047a3f8ab90-bc43cc4d"
+                              class="simulator_slider-container"
+                            >
+                              <div
+                                class="simulator_slider-track simulator_slider-energy"
+                              >
+                                <!-- <div class="simulator_track-toggle"></div> -->
+                              </div>
+                              <p id="ps-cost-kwh" class="simulator_energy-text">
+                                30p
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -166,7 +185,7 @@
                               id="w-node-_09c870b6-ce87-18cd-32fc-89ebc882ab39-bc43cc4d"
                               class="simulator_large-number simulator_biochar-text"
                             >
-                              0000 tons
+                              -
                             </p>
                           </div>
                           <div class="simulator_card-bottom-content">
@@ -179,7 +198,7 @@
                               id="w-node-_9bcdd2a5-7dc9-57dc-e448-945c6b9e8487-bc43cc4d"
                               class="simulator_large-number is-small simulator_biochar_10-text"
                             >
-                              000000 €
+                              -
                             </p>
                           </div>
                         </div>
@@ -206,9 +225,9 @@
                             </p>
                             <p
                               id="w-node-_087bed74-755e-df0e-483c-7034f2abcc18-bc43cc4d"
-                              class="simulator_large-number simulator_energy-text"
+                              class="simulator_large-number simulator_saving-text"
                             >
-                              0000 MWh
+                              -
                             </p>
                           </div>
                           <div class="simulator_card-bottom-content">
@@ -219,9 +238,9 @@
                             </p>
                             <p
                               id="w-node-_087bed74-755e-df0e-483c-7034f2abcc1d-bc43cc4d"
-                              class="simulator_large-number is-small simulator_energy_10-text"
+                              class="simulator_large-number is-small simulator_saving_10-text"
                             >
-                              000000 €
+                              -
                             </p>
                           </div>
                         </div>
@@ -244,13 +263,13 @@
                             <p
                               id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd2-bc43cc4d"
                             >
-                              CO2 removals (CO<sub>2</sub> eq)
+                              Carbon captured (CO<sub>2</sub> eq)
                             </p>
                             <p
                               id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
                               class="simulator_large-number simulator_co2-text"
                             >
-                              0000 tons
+                              -
                             </p>
                           </div>
                           <div class="simulator_card-bottom-content">
@@ -263,10 +282,97 @@
                               id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
                               class="simulator_large-number is-small simulator_co2_10-text"
                             >
-                              000000 €
+                              -
                             </p>
                           </div>
                         </div>
+
+                        <div
+                        id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bce-bc43cc4d"
+                        class="simulator_card"
+                      >
+                        <div class="simulator_card-top-content">
+                          <div
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd0-bc43cc4d"
+                            class="icon-frame is-small"
+                          >
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/632c82dcdb6deec60ce42d86_icon.svg"
+                              loading="lazy"
+                              alt=""
+                              class="card-icon"
+                            />
+                          </div>
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd2-bc43cc4d"
+                          >
+                            Waste Diverted
+                          </p>
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
+                            class="simulator_large-number simulator_waste-text"
+                          >
+                            -
+                          </p>
+                        </div>
+                        <div class="simulator_card-bottom-content">
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd7-bc43cc4d"
+                          >
+                            Over 10 years
+                          </p>
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
+                            class="simulator_large-number is-small simulator_waste_10-text"
+                          >
+                            -
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bce-bc43cc4d"
+                        class="simulator_card"
+                      >
+                        <div class="simulator_card-top-content">
+                          <div
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd0-bc43cc4d"
+                            class="icon-frame is-small"
+                          >
+                            <img
+                              src="https://uploads-ssl.webflow.com/63189509e70e8f2cb04b8c7b/632c82dcdb6deec60ce42d86_icon.svg"
+                              loading="lazy"
+                              alt=""
+                              class="card-icon"
+                            />
+                          </div>
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd2-bc43cc4d"
+                          >
+                            Emissons avoided from fossil fuels  (CO<sub>2</sub> eq)
+                          </p>
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd4-bc43cc4d"
+                            class="simulator_large-number simulator_fossil-text"
+                          >
+                            -
+                          </p>
+                        </div>
+                        <div class="simulator_card-bottom-content">
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd7-bc43cc4d"
+                          >
+                            Over 10 years
+                          </p>
+                          <p
+                            id="w-node-d755c5dd-37e6-9142-8cf7-cb2da89e1bd9-bc43cc4d"
+                            class="simulator_large-number is-small simulator_fossil_10-text"
+                          >
+                            -
+                          </p>
+                        </div>
+                      </div>
+
                       </div>
                     </div>
                   </div>

@@ -6,14 +6,23 @@ export const gbp = (n: number) =>
     minimumFractionDigits: 2,
   }).format(n);
 
-export const mass = (n: number) =>
+export const kgs = (n: number) =>
+  new Intl.NumberFormat("en-GB", {
+    style: "unit",
+    unit: "kilogram",
+    maximumFractionDigits: 0,
+  }).format(n);
+
+export const tons = (n: number) => kgs(n / 1000).replace("kg", "tons");
+
+export const kWh = (n: number) =>
   new Intl.NumberFormat("en-GB", {
     style: "unit",
     unit: "kilogram",
     maximumFractionDigits: 0,
   })
-    .format(n / 1000)
-    .replace("kg", "tons");
+    .format(n)
+    .replace("kg", "kWh");
 
 export const compoundInterest = (
   principal: number,
