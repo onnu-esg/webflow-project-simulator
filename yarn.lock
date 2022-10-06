@@ -12,13 +12,6 @@
   resolved "https://registry.yarnpkg.com/@esbuild/linux-loong64/-/linux-loong64-0.15.10.tgz#78a42897c2cf8db9fd5f1811f7590393b77774c7"
   integrity sha512-w0Ou3Z83LOYEkwaui2M8VwIp+nLi/NA60lBLMvaJ+vXVMcsARYdEzLNE7RSm4+lSg4zq4d7fAVuzk7PNQ5JFgg==
 
-"@rwap/jquery-ui-touch-punch@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@rwap/jquery-ui-touch-punch/-/jquery-ui-touch-punch-1.0.11.tgz#8b82470fa9156005c618e499a619e5e60bdf4559"
-  integrity sha512-GFRfHxnl9uH4v4F7E+rtXYbcsDYSas5fqfmKWVy/dfs+BDfLUqClIOL5MZlroDFoL3T9bCbsFMFXULHSL34ZdA==
-  dependencies:
-    jquery-ui ">=1.8"
-
 "@types/jquery@*", "@types/jquery@^3.5.14":
   version "3.5.14"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.14.tgz#ac8e11ee591e94d4d58da602cb3a5a8320dee577"
@@ -190,7 +183,7 @@ is-core-module@^2.9.0:
   dependencies:
     has "^1.0.3"
 
-jquery-ui@>=1.8, jquery-ui@^1.13.2:
+jquery-ui@^1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.13.2.tgz#de03580ae6604773602f8d786ad1abfb75232034"
   integrity sha512-wBZPnqWs5GaYJmo1Jj0k/mrSkzdQzKDwhXNtHKcBdAcKVxMM3KNYFq+iJ2i1rwiG53Z8M4mTn3Qxrm17uH1D4Q==
