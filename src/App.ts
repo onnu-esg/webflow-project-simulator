@@ -4,7 +4,7 @@ import "jquery-ui/ui/widgets/slider";
 
 import { Simulator } from "./Simulator";
 import { Defaults } from "./types";
-import { gbp, tons, kWh } from "./utils";
+import { gbp, tons, kW } from "./utils";
 
 export class App {
   sim: Simulator;
@@ -91,7 +91,7 @@ export class App {
     $("#simulator_saving").text(gbp(sim.saving));
 
     $("#simulator_price").text(gbp(sim.price));
-    $("#simulator_energy").text(kWh(sim.energy));
+    $("#simulator_energy").text(kW(sim.energy));
 
     $("#simulator_co2").text(tons(sim.co2));
     $("#simulator_fossil").text(tons(sim.fossils));

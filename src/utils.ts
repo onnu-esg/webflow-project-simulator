@@ -15,14 +15,14 @@ export const kgs = (n: number) =>
 
 export const tons = (n: number) => kgs(n / 1000).replace("kg", "");
 
-export const kWh = (n: number) =>
+export const kW = (n: number) =>
   new Intl.NumberFormat("en-GB", {
     style: "unit",
     unit: "kilogram",
     maximumFractionDigits: 0,
   })
     .format(n)
-    .replace("kg", "kWh");
+    .replace("kg", "kW");
 
 export const compoundInterest = (
   principal: number,
