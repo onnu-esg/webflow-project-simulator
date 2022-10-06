@@ -90,7 +90,7 @@ export class App {
 
     $("#simulator_saving").text(gbp(sim.saving));
 
-    $("#simulator_price").text(gbp(sim.price));
+    $("#simulator_price").text(`${gbp(sim.price)} per kWh`);
     $("#simulator_energy").text(kW(sim.energy));
 
     $("#simulator_co2").text(tons(sim.co2));
