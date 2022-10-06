@@ -15,6 +15,7 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "jquery-ui": "^1.13.2"
+    "jquery-ui": "^1.13.2",
+    "@rwap/jquery-ui-touch-punch": "^1.0.11"
   }
 }

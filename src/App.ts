@@ -1,6 +1,7 @@
 import "jquery-ui";
 import "jquery-ui/ui/widgets/mouse";
 import "jquery-ui/ui/widgets/slider";
+import "jquery-ui-touch-punch";
 
 import { Simulator } from "./Simulator";
 import { Defaults } from "./types";
